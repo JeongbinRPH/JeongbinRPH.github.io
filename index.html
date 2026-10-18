@@ -276,7 +276,7 @@
                     }, 5000)
                     for (let i = 0; i < 10; i++) {
                         if (inventory[i][0] == 'purple_berry') {
-                            if (inventory[i][1] < 100) {
+                            if (!(inventory[i][1] > 99)) {
                                 inventory[i][1]++;
                                 document.getElementById('islot' + i).src = "images/blocks/purple_berry_bush.png";
                                 document.getElementById('sslot' + i).textContent = inventory[i][1];
@@ -284,7 +284,7 @@
                             }
                         };
                         if (inventory[i][0] == 'air') {
-                            if (inventory[i][1] < 100) {
+                            if (!(inventory[i][1] > 99)) {
                                 inventory[i][0] = 'purple_berry';
                                 document.getElementById('islot' + i).src = "images/blocks/purple_berry_bush.png";
                                 document.getElementById('sslot' + i).textContent = inventory[i][1];
