@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>[판매 기능] 정빈 RPH V4.2</title>
+    <title>[판매 기능] 정빈 RPH V4.3</title>
     <style>
         body {
             margin: 0;
@@ -766,10 +766,6 @@
                 },
                 body: JSON.stringify({ mode: "onlineCheck", userid: userid})
             })
-                .then(response => response.text())
-                .then(result => {
-                    console.log(result);
-                })
                 .catch(error => {
                     console.error(error);
                     document.getElementById("message").textContent = "요청 또는 응답 처리에 실패했습니다.";
